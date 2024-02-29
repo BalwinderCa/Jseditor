@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+
+		<title>Js Editor</title>
+
+		<link rel="stylesheet" href="minified/themes/default.min.css" id="theme-style" />
+		<script src="minified/sceditor.min.js"></script>
+		<script src="minified/icons/monocons.js"></script>
+		<script src="minified/formats/bbcode.js"></script>
+
+
+		<style>
+			html {
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 13px;
+			}
+			form div {
+				padding: .5em;
+			}
+			code:before {
+				position: absolute;
+				content: 'Code:';
+				top: -1.35em;
+				left: 0;
+			}
+			code {
+				margin-top: 1.5em;
+				position: relative;
+				background: #eee;
+				border: 1px solid #aaa;
+				white-space: pre;
+				padding: .25em;
+				min-height: 1.25em;
+			}
+			code:before, code {
+				display: block;
+				text-align: left;
+			}
+		</style>
+	</head>
+	<body>
+		<form action="" method="post">
+			<div>
+				<textarea id="main" style="height:400px;width:800px;">
+					Discover the riches of our editor ✨
+					
+					Read on to better understand the functionalities you can test with this demo.
+					
+					💡 Did you know that…
+					
+					CKEditor is customizable. You can fine-tune the set of enabled plugins, available toolbar buttons, and the behavior of features.
+					
+					The editor supports @mentions. Start typing @An to see available suggestions.
+					
+					You can paste content from Word or Google Docs, retaining the original document structure and formatting.
+					
+					Thanks to Import from Word Import from Word, you can convert a DOCX document into HTML and edit it in CKEditor 5.
+					
+					You can export your document to PDF Export to PDF or Word Export to Word with a single click.
+					
+					Inserting Images and Image Editing
+					
+					Inserting and editing images is seamless and efficient, thanks to the powerful capabilities and the intuitive interface of the CKBox integration. Click the CKBox icon Browse files to manage or edit images and other files in this demo.
+					
+					Effortless Image Insertion
+					
+					Drag and Drop: Simply drag images from your device or directly from web sources into the editor.
+					
+					URL Uploading: Paste image URLs for quick embedding without leaving the editor.
+					
+					Advanced Image Editing:
+					
+					Editing: Resize, crop, and rotate directly from the editor, ensuring perfect placement every time.
+					
+					Customizable Styles: Apply various presets to format your image according to social media standards.
+					</textarea>
+					
+					
+
+			</div>
+
+			<div>
+			</div>
+		</form>
+
+		
+
+
+		<script>
+			var textarea = document.getElementById('main');
+			sceditor.create(textarea, {
+				format: 'bbcode',
+				icons: 'monocons',
+				style: 'minified/themes/content/default.min.css'
+			});
+			document.getElementById('theme-style').href ='minified/themes/square.min.css';
+		</script>
+	</body>
+</html> 
